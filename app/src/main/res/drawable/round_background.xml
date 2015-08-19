@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+            <item android:drawable="@drawable/round_ring"/>
+            <item android:drawable="@drawable/round_with_ring"/>
+        </layer-list>
+    </item>
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:drawable="@drawable/round_ring"/>
+            <item android:drawable="@drawable/round_with_ring"/>
+        </layer-list>
+    </item>
+</selector>

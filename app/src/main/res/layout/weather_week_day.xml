@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="@dimen/value_8dp">
+
+    <com.sharebuttons.weather.ui.TextThin
+        android:id="@+id/weekDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Monday"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/md_white_1000"/>
+
+    <ImageView
+        android:id="@+id/weekIcon"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:src="@drawable/cloudy_day_rain"/>
+
+    <com.sharebuttons.weather.ui.TextLight
+        android:textColor="@color/md_white_1000"
+        android:id="@+id/weekTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="29"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_teal_500"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="512dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/weatherIcon"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:contentDescription="@string/weather_icon_desc"
+            android:src="@drawable/sunny"/>
+
+        <com.sharebuttons.weather.ui.TextLight
+            android:id="@+id/temperatureTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="@string/dash_label"
+            android:textColor="@color/md_grey_300"
+            android:textSize="52sp"
+            android:textStyle="bold"/>
+
+        <com.sharebuttons.weather.ui.TextLight
+            android:id="@+id/locationTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/weatherIcon"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/lacality_label"
+            android:textColor="@color/md_white_1000"
+            android:textSize="18sp"/>
+
+        <com.sharebuttons.weather.ui.TextThin
+            android:id="@+id/summaryTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/locationTextView"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/getting_label"
+            android:textColor="@color/md_white_1000"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="96dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/hourList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/datList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</LinearLayout>

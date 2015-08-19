@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="512dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/weatherIcon"
+        android:layout_width="match_parent"
+        android:layout_height="156dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:contentDescription="@string/weather_icon_desc"
+        android:src="@drawable/sunny"/>
+
+    <com.sharebuttons.weather.ui.TextLight
+        android:id="@+id/temperatureTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weatherIcon"
+        android:gravity="center"
+        android:text="@string/dash_label"
+        android:textColor="@color/md_grey_300"
+        android:textSize="64sp"
+        android:textStyle="bold"/>
+
+    <com.sharebuttons.weather.ui.TextLight
+        android:id="@+id/locationTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/weatherIcon"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/lacality_label"
+        android:textColor="@color/md_white_1000"
+        android:textSize="18sp"/>
+
+    <com.sharebuttons.weather.ui.TextThin
+        android:id="@+id/summaryTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/locationTextView"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/getting_label"
+        android:textColor="@color/md_white_1000"
+        android:textSize="22sp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

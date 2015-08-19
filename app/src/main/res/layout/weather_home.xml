@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+   <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.sharebuttons.weather.ui.TextThin
+                android:id="@+id/locationLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/getting_label"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/md_white_1000"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <com.sharebuttons.weather.ui.TextLight
+                android:id="@+id/weekDayLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/week_label"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/md_white_1000"/>
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/weatherImageView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="@dimen/value_16dp"
+        android:contentDescription="@string/weather_icon_desc"
+        android:src="@drawable/sunny"/>
+
+    <com.sharebuttons.weather.ui.TextThin
+        android:id="@+id/temperatureValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weatherImageView"
+        android:layout_marginTop="@dimen/value_24dp"
+        android:gravity="center"
+        android:text="@string/dashes"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/md_white_1000"
+        android:textSize="196sp"/>
+
+    <com.sharebuttons.weather.ui.TextLight
+        android:padding="16dp"
+        android:id="@+id/summaryLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/temperatureValue"
+        android:gravity="center"
+        android:text="Cloudy"
+        android:textColor="@color/md_white_1000"
+        android:textSize="18sp"/>
+
+    <LinearLayout
+        android:id="@+id/moreDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/summaryLabel"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/value_32dp"
+        android:paddingRight="@dimen/value_32dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/value_32dp"
+                android:layout_height="@dimen/value_32dp"
+                android:contentDescription="@string/weather_icon_desc"
+                android:src="@drawable/ic_wind_speed"
+                android:tint="@color/md_white_1000"/>
+
+            <com.sharebuttons.weather.ui.TextLight
+                android:id="@+id/windSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/kph_label"
+                android:textColor="@color/md_white_1000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/value_32dp"
+                android:layout_height="@dimen/value_32dp"
+                android:contentDescription="@string/weather_icon_desc"
+                android:src="@drawable/ic_rain_snow_chance"
+                android:tint="@color/md_white_1000"/>
+
+            <com.sharebuttons.weather.ui.TextLight
+                android:id="@+id/precipValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/percentage_label"
+                android:textColor="@color/md_white_1000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/value_32dp"
+                android:layout_height="@dimen/value_32dp"
+                android:contentDescription="@string/weather_icon_desc"
+                android:src="@drawable/ic_drop"
+                android:tint="@color/md_white_1000"/>
+
+            <com.sharebuttons.weather.ui.TextLight
+                android:id="@+id/humidityValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/percentage_label"
+                android:textColor="@color/md_white_1000"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@id/moreDetails"
+        android:id="@+id/weekDayList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"/>
+
+</RelativeLayout>
